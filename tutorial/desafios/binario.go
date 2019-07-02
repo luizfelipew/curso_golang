@@ -11,7 +11,26 @@ func toBinary(i int) string {
 	return strconv.FormatInt(i64, 2)
 }
 
+func toBinary2(i int) string {
+
+	binario := ""
+
+	num := strconv.Itoa(i)
+	//os.Args[i]
+
+	for len(num)-1 > 0 {
+		fmt.Println("passou aqui")
+		if i%2 == 0 {
+			binario = "0" + binario
+		} else {
+			binario = "1" + binario
+		}
+	}
+	return binario
+}
+
 func main() {
-	num := 10
-	fmt.Println("Binary : ", toBinary(num))
+	num := 2
+	// fmt.Println("Binary : ", toBinary(num))
+	fmt.Println("Binary : ", toBinary2(num))
 }
