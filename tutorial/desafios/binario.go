@@ -19,8 +19,11 @@ func toBinary2(number int) string {
 	//num := strconv.Itoa(number)
 	//os.Args[i]
 	// fmt.Printf("Teste: %d ", len(num))
-
 	for i := 0; num > 0; i++ {
+
+		if num == 0 {
+			return "0"
+		}
 		if num%2 == 0 {
 			binario = "0" + binario
 		} else {
@@ -33,7 +36,7 @@ func toBinary2(number int) string {
 }
 
 func main() {
-	num := 4
+	num := 10
 	// fmt.Println("Binary : ", toBinary(num))
 	fmt.Println("Binary : ", toBinary2(num))
 }
